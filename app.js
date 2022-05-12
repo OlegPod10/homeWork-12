@@ -1,21 +1,18 @@
-// Задание 1
+// // Задание 1
 
-function calcNumbers(a, b, c) {
+function calcNumbers(a, b = 0, c = 0) {
 let result = a + b + c
-return console.log(result)
+return result
 }
-
-calcNumbers("ffads",20,10) 
-
+console.log(calcNumbers("ffads",20,10));
 
 // // Заданиче 2
 
 function getStrings(a, b, c) {
-    const strings = [a, b, c];
-    let calcStrings = strings.sort().join(' ');
-    return console.log(calcStrings)
+  const strings = [a, b, c];
+  return strings.sort((a, b) => (a > b ? 1 : -1)).join(" ");
 }
-getStrings ("fort", "zero", "alpha")
+console.log(getStrings("fort", "zero", "alpha"));
 
 // Задача 3
 
@@ -29,14 +26,13 @@ function getName(a) {
 }
 getName();
 
-// Задача 4
-
+// // Задача 4
 
 function calcNumbers(a, b) {
     if (a && b >= 0) {
-        return console.log(Math.pow(a, b))
-    } else if (b == undefined) {
-        return console.log(Math.pow(a,a))
+        return a ** b;
+    } else if (b === undefined) {
+        return a ** 2;
     }
 }
-calcNumbers(3,4)
+console.log(calcNumbers(3,4))
